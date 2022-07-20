@@ -1,0 +1,76 @@
+.cleans__base {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    // background-color: rgba(170, 248, 107, 0.229);
+    // border: 1px solid rgba(76, 131, 31, 0.5);
+    // background-color: rgba(170, 248, 107, 0.229);
+    width: 65%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .checkBox {
+        width: 30px;
+        height: 30px;
+        background-color: rgba(150, 143, 143, 0.158);
+        border: 1px solid rgba(0, 0, 0, 0.229);
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 0.75rem;
+        color: rgba(76, 131, 31, 0.75);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .checkMark {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+    }
+}
+
+.headers {
+    font-weight: 500;
+   
+}
+
+.subHeaders {
+    font-weight: 400;
+    margin-left: 1.5rem;
+}
+
+.cleans__list {
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.list__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    .list__sub_container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        margin-left: 1rem;
+    }
+}
+
+.subtext {
+    font-weight: 300;
+    font-size: 1rem;
+}
