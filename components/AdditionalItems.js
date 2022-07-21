@@ -3,14 +3,20 @@ import styles from "./AdditionalItems.module.scss"
 import { AppContext } from "../context/Context"
 
 const AdditionalItems = () => {
-    const { openModal } = useContext(AppContext)
+    const { openModal, formData, handleChange } = useContext(AppContext)
 
     return (
         <div className={styles.form}>
             <label className={styles.label} htmlFor="size">
                 What is the size of your home?
             </label>
-            <select id="size" name="name" className={styles.select}>
+            <select
+                id="size"
+                name="size"
+                className={styles.select}
+                value={formData.size}
+                onChange={handleChange}
+            >
                 <option value="select">Please Choose An Option</option>
                 <option value="1000">One Bedroom Under 1000 sqft</option>
                 <option value="1600">Two Bedroom Under 1600 sqft</option>
@@ -27,6 +33,8 @@ const AdditionalItems = () => {
                 name="rooms"
                 id="rooms"
                 className={styles.select}
+                value={formData.rooms}
+                onChange={(event) => handleChange(event)}
             />
             <label className={styles.label} htmlFor="pets">
                 How Many Pets Do You Have?
@@ -36,73 +44,130 @@ const AdditionalItems = () => {
                 name="pets"
                 id="pets"
                 className={styles.select}
+                value={formData.pets}
+                onChange={handleChange}
             />
             <h2>Additional Items</h2>
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="basement">
                     Basement (Square Footage Dependent)
                 </label>
-                <input type="checkbox" name="basement" id="basement" />
+                <input
+                    type="checkbox"
+                    name="basement"
+                    id="basement"
+                    value={formData.basement}
+                    onChange={handleChange}
+                />
             </div>
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="kitchen">
-                    Additional Clean (Basic Clean)
+                    Additional Kitchen (Basic Clean)
                 </label>
-                <input type="checkbox" name="kitchen" id="kitchen" />
+                <input
+                    type="checkbox"
+                    name="kitchen"
+                    id="kitchen"
+                    value={formData.kitchen}
+                    onChange={handleChange}
+                />
             </div>
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="den">
                     Den
                 </label>
-                <input type="checkbox" name="den" id="den" />
+                <input
+                    type="checkbox"
+                    name="den"
+                    id="den"
+                    value={formData.den}
+                    onChange={handleChange}
+                />
             </div>
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="laundry">
                     Load of Laundry
                 </label>
-                <input type="checkbox" name="laundry" id="laundry" />
+                <input
+                    type="checkbox"
+                    name="laundry"
+                    id="laundry"
+                    value={formData.laundry}
+                    onChange={handleChange}
+                />
             </div>
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="oven">
                     Inside the Oven
                 </label>
-                <input type="checkbox" name="oven" id="oven" />
+                <input
+                    type="checkbox"
+                    name="oven"
+                    id="oven"
+                    value={formData.oven}
+                    onChange={handleChange}
+                />
             </div>
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="fridge">
                     Inside Fridge
                 </label>
-                <input type="checkbox" name="fridge" id="fridge" />
+                <input
+                    type="checkbox"
+                    name="fridge"
+                    id="fridge"
+                    value={formData.fridge}
+                    onChange={handleChange}
+                />
             </div>
 
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="trimBase">
                     Trim & Baseboards
                 </label>
-                <input type="checkbox" name="trimBase" id="trimBase" />
+                <input
+                    type="checkbox"
+                    name="trimBase"
+                    id="trimBase"
+                    value={formData.trimBase}
+                    onChange={handleChange}
+                />
             </div>
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="bottles">
                     Sorting Recycle & Bottle
                 </label>
-                <input type="checkbox" name="bottles" id="bottles" />
+                <input
+                    type="checkbox"
+                    name="bottles"
+                    id="bottles"
+                    value={formData.bottles}
+                    onChange={handleChange}
+                />
             </div>
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="dishes">
                     Dishes
                 </label>
-                <input type="checkbox" name="dishes" id="dishes" />
+                <input
+                    type="checkbox"
+                    name="dishes"
+                    id="dishes"
+                    value={formData.dishes}
+                    onChange={handleChange}
+                />
             </div>
             <div className={styles.checkbox}>
                 <label className={styles.label} htmlFor="blinds">
                     Dusting Blinds
                 </label>
-                <input type="checkbox" name="blinds" id="blinds" />
-            </div>
-            <div className={styles.buttonDiv}>
-                <button className={styles.button} onClick={() => openModal()}>
-                    Submit
-                </button>
+                <input
+                    type="checkbox"
+                    name="blinds"
+                    id="blinds"
+                    value={formData.blinds}
+                    onChange={handleChange}
+                />
             </div>
         </div>
     )

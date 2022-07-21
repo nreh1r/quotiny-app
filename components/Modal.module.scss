@@ -38,6 +38,37 @@
             cursor: pointer;
             border-radius: 4px;
         }
+
+        .modalHeader {
+            padding-top: 1.5rem;
+        }
     }
 
 }
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  
+    .button {
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        border: none;
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        background-color: #0276FF;
+        color: #fff;
+        font-size: 1.25rem;
+        margin-top: 2rem;
+  
+        &:hover {
+            background-color: #1C84FF;
+        }
+  
+        &:active {
+            background-color: #006AE8;
+        }
+    }
+  }

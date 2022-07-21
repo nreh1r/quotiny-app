@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 import { AppContext } from "../context/Context"
 
 const BaseClean = () => {
-    const { isPackageChosen, choosePackage } = useContext(AppContext)
-    console.log(isPackageChosen, choosePackage)
+    const { isPackageChosen, choosePackage, formData } = useContext(AppContext)
+
     const [isClicked, setIsClicked] = useState(false)
     let mainCardStyles = {
         backgroundColor: "rgba(170, 248, 107, 0.229)",
