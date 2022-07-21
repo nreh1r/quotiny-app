@@ -17,8 +17,7 @@ async function handler(req, res) {
         // Store Quote Info In Database
 
         let client
-        const connectionString =
-            "mongodb+srv://andre:andre5@cluster0.gymffbc.mongodb.net/quotes?retryWrites=true&w=majority"
+        const connectionString = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.gymffbc.mongodb.net/${process.env.mongodb_database2}?retryWrites=true&w=majority`
         try {
             client = await MongoClient.connect(connectionString)
         } catch (error) {
